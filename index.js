@@ -22,7 +22,7 @@ function viewCart() {
   if (cart.length === 0) {
     console.log('Your shopping cart is empty.');
   } else {
-    for (var i = 1; i < cart.length; i++) {
+    for (var i = 0; i < cart.length; i++) {
       if (cart.length === 1) {
         result += `${Object.keys(cart[i])} at $${Object.values(cart[i])}.`;
       } else {
@@ -31,7 +31,7 @@ function viewCart() {
         } else if (i === (cart.length - 1)) {
           result += `${Object.keys(cart[i])} at $${Object.values(cart[i])} and`;
         } else {
-          result += `${Object.keys(cart[i])} at $${Object.values(cart[i])} ,`;
+          result += `${Object.keys(cart[i])} at $${Object.values(cart[i])}, `;
         }
       }
     }
