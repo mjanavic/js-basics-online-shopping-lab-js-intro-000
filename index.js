@@ -23,16 +23,12 @@ function viewCart() {
     console.log('Your shopping cart is empty.');
   } else {
     for (var i = 0; i < cart.length; i++) {
-      if (cart.length === 1) {
+      if (i === (cart.length - 1)) {
         result += `${Object.keys(cart[i])} at $${Object.values(cart[i])}.`;
+      } else if (i === (cart.length - 2)) {
+        result += `${Object.keys(cart[i])} at $${Object.values(cart[i])}, and `;
       } else {
-        if (i === (cart.length -1)) {
-          result += `${Object.keys(cart[i])} at $${Object.values(cart[i])}.`;
-        } else if (i === (cart.length - 2)) {
-          result += `${Object.keys(cart[i])} at $${Object.values(cart[i])} and `;
-        } else {
-          result += `${Object.keys(cart[i])} at $${Object.values(cart[i])}, `;
-        }
+        result += `${Object.keys(cart[i])} at $${Object.values(cart[i])}, `;
       }
     }
     console.log(result);
