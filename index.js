@@ -29,7 +29,7 @@ function viewCart() {
         if (i === (cart.length -1)) {
           result += `${Object.keys(cart[i])} at $${Object.values(cart[i])}.`;
         } else if (i === (cart.length - 2)) {
-          result += `${Object.keys(cart[i])} at $${Object.values(cart[i])} and`;
+          result += `${Object.keys(cart[i])} at $${Object.values(cart[i])} and `;
         } else {
           result += `${Object.keys(cart[i])} at $${Object.values(cart[i])}, `;
         }
