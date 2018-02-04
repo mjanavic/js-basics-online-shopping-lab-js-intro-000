@@ -24,14 +24,14 @@ function viewCart() {
   } else {
     for (var i = 0; i < cart.length; i++) {
       if (cart.length === 1) {
-        result += `${Object.keys(cart[i])} at $${cart[i]}.`;
+        result += `${Object.keys(cart[i])} at $${Object.values(cart[i])}.`;
       } else {
         if (i < (cart.length - 1)) {
-          result += `${Object.keys(cart[i])} at $${cart[i]} , `;
+          result += `${Object.keys(cart[i])} at $${Object.values(cart[i])} and `;
         } else if (i === (cart.length - 1)) {
-          result += `${Object.keys(cart[i])} at $${cart[i]} and `;
+          result += `${Object.keys(cart[i])} at $${Object.values(cart[i])}.`;
         } else {
-          result += `${Object.keys(cart[i])} at $${cart[i]}.`;
+          result += `${Object.keys(cart[i])} at $${Object.values(cart[i])} ,`;
         }
       }
     }
